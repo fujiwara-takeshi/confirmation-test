@@ -1,0 +1,152 @@
+.contact__content-wrapper {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.contact__content-inner {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contact__heading {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.contact__heading-title {
+    font-size: 30px;
+    color: #58311598;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form__group {
+    width: 100%;
+    padding-bottom: 30px;
+    display: flex;
+}
+
+.form__group-title {
+    width: 35%;
+    font-size: 18px;
+}
+
+.form__label--item {
+    color: #583115c5;
+}
+
+.form__label--required {
+    color: red;
+}
+
+.form__group-content {
+    width: 65%;
+}
+
+.form__input-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__input-name input {
+    width: 46%;
+    padding: 10px 20px;
+    background-color: #7a645317;
+    border: none;
+}
+
+.form__error {
+    color: red;
+}
+
+.form__radio-gender {
+    display: flex;
+    align-items: center;
+}
+
+.form__radio--item {
+    font-size: 18px;
+    color: #583115c5;
+}
+
+.form__radio--item input {
+    position: relative;
+    bottom: 1px;
+    transform: scale(1.2);
+}
+
+.form__radio--label {
+    margin-right: 70px;
+}
+
+.form__radio--label:last-of-type {
+    margin-right: 0;
+}
+
+.form__input-email input,
+.form__input-address input,
+.form__input-building input {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #7a645317;
+    border: none;
+}
+
+.form__input-tel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__input-tel input {
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    background-color: #7a645317;
+    border: none;
+}
+
+.form__input-category select {
+    width: 55%;
+    padding: 10px 20px;
+    background-color: #7a645317;
+    border: none;
+}
+
+.form__input-category select:invalid {
+    color: #5831156b;
+}
+
+.form__input-category option {
+    color: black;
+}
+
+.form__input-contact textarea {
+    width: 100%;
+    padding: 16px 20px;
+    font-family: inherit;
+    background-color: #7a645317;
+    border: none;
+    resize: none;
+}
+
+::placeholder {
+    color: #583115c4;
+}
+
+.form__button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form__button-submit {
+    padding: 8px 40px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #351f109a;
+    border: none;
+    cursor: pointer;
+}

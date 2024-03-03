@@ -1,0 +1,46 @@
+.thanks {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.thanks__outer {
+    max-width: 1230px;
+}
+
+.thanks__background-text {
+    width: 100%;
+    font-size: 240px;
+    font-weight: bold;
+    font-family: serif;
+    color: #7a645311;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.thanks__inner {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.thanks__message {
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #7a6453;
+}
+
+.thanks__link--home {
+    padding: 8px 40px;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #7a6453;
+    border: none;
+    cursor: pointer;
+}
