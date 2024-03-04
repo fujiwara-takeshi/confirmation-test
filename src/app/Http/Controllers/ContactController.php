@@ -31,10 +31,8 @@ class ContactController extends Controller
             'category_id',
             'detail',
         ]);
-        // $contact = new Contact($contactData);
         $categories = Category::all();
-        // $contact->genderLabel = (new Contact())->getGenderLabel($contact->gender);
-        $genderLabel = (new Contact())->getGenderLabel($contact['gender']); //genderLabelを変数に格納
+        $genderLabel = (new Contact())->getGenderLabel($contact['gender']);
         return view('confirm', compact('contact', 'categories', 'genderLabel'));
     }
 

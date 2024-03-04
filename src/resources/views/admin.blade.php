@@ -13,12 +13,6 @@
 @endsection
 
 @section('content')
-<dialog id="contactDetailModal">
-    <Button class="closeButton">✖</Button>
-    <h2>Contact Detail</h2>
-    <!-- ここに詳細情報を表示するための要素を追加 -->
-</dialog>
-
 <div class="admin__content">
     <div class="admin__content-wrapper">
         <div class="admin__content-inner">
@@ -71,7 +65,11 @@
                         <td class="contact-table__data--email">{{ $contact['email'] }}</td>
                         <td class="contact-table__data--category">{{ $contact['category']['content'] }}</td>
                         <td>
-                            <button class="contact-table__detail-button openButton">詳細</button>
+                            <form class="detail-form" action="/detail" method="get">
+                                @csrf
+                                <input type="hidden" name="id" value="{{ $contact['id'] }}">
+                                <button class="contact-table__detail-button">詳細</button>
+                            </form>
                         </td >
                     </tr>
                     @endforeach
@@ -80,39 +78,4 @@
         </div>
     </div>
 </div>
-
-<script>
-    const contactDetailModal = document.getElementById('contactDetailModal');
-    const closeModalButton = document.querySelector('#contactDetailModal .closeButton');
-    const openModalButtons = document.querySelectorAll('.openButton');
-
-    openModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // const contactId = button.dataset.contactId;
-            // $.ajax({
-            //     url: '/admin/detail/' + contactId,
-            //     method: 'GET',
-            //     success: function(response) {
-            //         $('#contactDetailModal').html(response);
-            showModal(contactDetailModal);
-        });
-        // error: function(xhr, status, error) {
-        //     console.error(error);
-        // }
-            // });
-        // });
-    });
-
-    closeModalButton.addEventListener('click', () => {
-        hideModal(contactDetailModal);
-    });
-
-    function showModal(modal) {
-        modal.showModal();
-    }
-
-    function hideModal(modal) {
-        modal.close();
-    }
-</script>
 @endsection

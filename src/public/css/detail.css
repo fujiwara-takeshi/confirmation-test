@@ -1,0 +1,55 @@
+.detail {
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #502e18c4;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail__outer {
+    position: relative;
+}
+
+.detail__header {
+    text-align: right;
+}
+
+.header__link-return {
+    font-size: 24px;
+    color: #6d3e1dde;
+    text-decoration: none;
+}
+
+.detail__inner {
+    padding: 40px 40px;
+}
+
+.detail__table {
+    width: 100%;
+    color: #6d3e1dde;
+}
+
+.table__header {
+    width: 35%;
+    padding: 16px;
+    text-align: left;
+}
+
+.form__button-area {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.form__button-delete {
+    padding: 5px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #dc3545;
+    border: none;
+    cursor: pointer;
+}

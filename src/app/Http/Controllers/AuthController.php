@@ -26,7 +26,7 @@ class AuthController extends Controller
             ->CategorySearch($request->category_id)
             ->DateSearch($request->created_at)
             ->KeywordSearch($request->keyword)
-            ->get();
+            ->paginate(7);
         $categories = Category::all();
         $contacts->each(function ($contact) {
             $contact->genderLabel = (new Contact())->getGenderLabel($contact['gender']);
@@ -34,11 +34,17 @@ class AuthController extends Controller
         return view('admin', compact('contacts', 'categories'));
     }
 
-    // public function detail($id)
-    // {
-    //     $contact = Contact::with('category')->find($id);
-    //     $contact->genderLabel = (new Contact())->getGenderLabel($contact['gender']);
-    //     $categories = Category::all();
-    //     return view('admin', compact('contact', 'categories'));
-    // }
+    public function detail(Request $request)
+    {
+        $contact = Contact::with('category')->find($request->id);
+        $categories = Category::all();
+        $genderLabel = (new Contact())->getGenderLabel($contact['gender']);
+        return view('detail', compact('contact', 'categories', 'genderLabel'));
+    }
+
+    public function destroy(Request $request)
+    {
+        Contact::find($request->id)->delete();
+        return redirect('/admin');
+    }
 }
